@@ -1,0 +1,39 @@
+{
+    "num_agents": 7,
+    "replica": false,
+    "dt": 0.05,
+    "boundary": 20,
+    "k": 6,
+    "collision_distance": 0.5,
+    "spacing": 5.5,
+    "init_x": 5.0,
+    "init_y": 5.0,
+    "random_seed": 12345,
+    "sensing":10.0,
+    "render": true,
+    "n_points_x": 3,
+    "n_points_y": 3,
+    "reward_components": ["collision", "spacing"],
+    "reward_params": {
+        "collision": {
+            "collision_penalty": -5,
+            "no_collision_reward": 0.01
+        },
+        "spacing": {
+            "desired_distance": 1.5,
+            "reward_amount": 0.05
+        }
+    },
+    "controller": {
+        "alpha": 3.02,
+        "beta": 1.2,
+        "epsilon": 12,
+        "sigma_const": 0.5,
+        "sensing_range": 10.0,
+        "h_alignment": true,
+        "k1": 0.999,
+        "k2": 0.15,
+        "umax_const": 2.5,
+        "wmax": 3.14
+    }
+}
